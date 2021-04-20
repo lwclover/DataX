@@ -18,7 +18,10 @@ public enum DataBaseType {
     PostgreSQL("postgresql", "org.postgresql.Driver"),
     RDBMS("rdbms", "com.alibaba.datax.plugin.rdbms.util.DataBaseType"),
     DB2("db2", "com.ibm.db2.jcc.DB2Driver"),
-    ADS("ads","com.mysql.jdbc.Driver");
+    ADS("ads","com.mysql.jdbc.Driver"),
+    ClickHouse("clickhouse", "ru.yandex.clickhouse.ClickHouseDriver"),
+    KingbaseES("kingbasees", "com.kingbase8.Driver"),
+    Oscar("oscar", "com.oscar.Driver");
 
 
     private String typeName;
@@ -53,8 +56,14 @@ public enum DataBaseType {
             case DB2:
                 break;
             case PostgreSQL:
-            	break;
+                break;
+            case ClickHouse:
+                break;
             case RDBMS:
+                break;
+            case KingbaseES:
+                break;
+            case Oscar:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
@@ -90,8 +99,14 @@ public enum DataBaseType {
             case DB2:
                 break;
             case PostgreSQL:
-            	break;
+                break;
+            case ClickHouse:
+                break;
             case RDBMS:
+                break;
+            case KingbaseES:
+                break;
+            case Oscar:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
@@ -117,7 +132,9 @@ public enum DataBaseType {
                 break;
             case DB2:
             case PostgreSQL:
-            	break;
+            case KingbaseES:
+            case Oscar:
+                break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type.");
         }
@@ -140,6 +157,8 @@ public enum DataBaseType {
                 break;
             case DB2:
             case PostgreSQL:
+            case KingbaseES:
+            case Oscar:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type");
@@ -162,6 +181,10 @@ public enum DataBaseType {
             case DB2:
                 break;
             case PostgreSQL:
+                break;
+            case KingbaseES:
+                break;
+            case Oscar:
                 break;
             default:
                 throw DataXException.asDataXException(DBUtilErrorCode.UNSUPPORTED_TYPE, "unsupported database type");
